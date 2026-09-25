@@ -78,7 +78,7 @@ backwards compatible.
     ],
     "require": {
         ...
-        "angelahnicole/jshrink": "dev-master"
+        "angelahnicole/jshrink": "dev-main"
         ...
     }
 }
