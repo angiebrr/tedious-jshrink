@@ -1,3 +1,26 @@
+# JShrink for Laravel 4 (fork)
+
+> [!WARNING]
+> Archived and no longer maintained; kept for reference. This is my April 2014 fork of JShrink 0.5 with a Laravel 4 service provider, not the official package. Laravel 4 is long past end-of-life, and the provider uses `$app->share()`, which later Laravel versions removed. The upstream project is [tedious/JShrink](https://github.com/tedious/JShrink); the README below is its README as I adapted it for Laravel.
+
+## Overview
+
+A fork of JShrink, a JavaScript minifier written in PHP, that registers it with Laravel 4 so you can call `JShrink::minify($js)` through a facade alias. My changes, all from April 29, 2014:
+
+- **`src/JShrink/JShrinkServiceProvider.php`**: a Laravel service provider that binds a `Minifier` instance into the container as `JShrink`
+- **`composer.json`**: renamed the package to `angelahnicole/jshrink` so it could be installed from this fork as a VCS repository
+- **README**: Laravel install steps (Composer repository, service provider, class alias), a short troubleshooting list, and the facade-style usage examples
+
+My commits are the six by angelahnicole; the minifier itself and everything else is upstream.
+
+**Tech:** PHP, Laravel 4, Composer
+
+The minifier is BSD-3-Clause licensed, like upstream; see [LICENSE](LICENSE).
+
+---
+
+## The fork's original README
+
 # JShrink for Laravel 4 [![Build Status](https://travis-ci.org/tedivm/JShrink.svg?branch=master)](https://travis-ci.org/tedivm/JShrink)
 [![License](http://img.shields.io/packagist/l/tedivm/JShrink.svg)](https://github.com/tedivm/JShrink/blob/master/LICENSE)
 [![Latest Stable Version](http://img.shields.io/github/release/tedivm/JShrink.svg)](https://packagist.org/packages/tedivm/JShrink)
@@ -55,7 +78,7 @@ backwards compatible.
     ],
     "require": {
         ...
-        "angelahnicole/jshrink": "dev-master"
+        "angelahnicole/jshrink": "dev-main"
         ...
     }
 }
